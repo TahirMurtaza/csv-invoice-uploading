@@ -36,7 +36,7 @@ def upload_file():
             if f.filename != '':
                 file_ext = os.path.splitext(f.filename)[1]
                 if file_ext not in app.config['UPLOAD_EXTENSIONS']:
-                    abort(400)
+                    return jsonify({"message": "Not a CSV file"})
                 filepath = os.path.join(app.config['UPLOADS_PATH'], f.filename)
                 f.save(filepath)
                 output = process_csv(filepath)

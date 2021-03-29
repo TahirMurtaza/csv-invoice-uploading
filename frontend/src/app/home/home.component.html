@@ -9,13 +9,8 @@
     
     </mat-card>
     <mat-card *ngIf="output">
-        <div class="row">
-            {{output}}
-        </div>
+        <div [innerHTML]="output"></div>
     </mat-card>
     <input type="file" #fileUpload id="fileUpload" name="fileUpload" accept="csv/*" style="display:none;" />
-    <mat-form-field>
-        <mat-label>Uploaded Successfully</mat-label>
-        <input matInput value="Sucess" #action>
-      </mat-form-field>
+
 </div>

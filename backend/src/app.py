@@ -98,7 +98,7 @@ def process_csv(filepath):
                 outputmsg = "Invalid data inserted Id={}, Amount={}, Due On={}". format(invoice_id,amount,due_on)
                 output.append(outputmsg)
         for txt in output:
-            outputmsg += txt + '\n'
+            outputmsg += txt + '<br>'
 
         return outputmsg
         

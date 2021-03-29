@@ -40,7 +40,7 @@ def upload_file():
                 filepath = os.path.join(app.config['UPLOADS_PATH'], f.filename)
                 f.save(filepath)
                 output = process_csv(filepath)
-                return jsonify({"message": str(e),"output": output})
+                return jsonify({"message": "CSV successfully uploaded!","output": output})
     except Exception as e:
         return jsonify({"message": str(e)})
 
